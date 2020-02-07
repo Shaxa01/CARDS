@@ -1,0 +1,84 @@
+
+body{
+    background: linear-gradient(-120deg, #c1d5e7, #c0cbe0, rgb(232, 234, 236), rgb(252, 252, 252));
+}
+header{
+    a:hover{
+        text-decoration: none !important;
+    }
+    sup{
+        font-size: 10px;
+    }
+}
+
+section{
+    .wave{
+        position: absolute;
+        bottom: 250px;
+        left: 0;
+    }
+    .card-header{
+
+        span{
+            font-size: 100px;
+        }
+    }
+
+    #second{
+        .card-header{
+            background-color: #194569 !important;   
+            span{
+                color: #fff !important;
+            }   
+        }
+        span{
+            color: #194569 !important;
+        }     
+
+    }
+
+}
+
+@each $padding-x, $padding-y, $padding-top,$padding-right,$padding-bottom,$padding-left in px, py, pt,pr,pb,pl {
+    @for $num from 0 to 100 {  
+
+        .pt#{$padding-top}-#{$num} {
+            padding-top: #{$num}px;
+        }
+
+        .pr#{$padding-right}-#{$num} {
+            padding-right: #{$num}px;
+        }
+
+        .pb#{$padding-bottom}-#{$num} {
+            padding-bottom: #{$num}px;
+        }
+
+        .pl#{$padding-left}-#{$num} {
+            padding-left: #{$num}px;
+        }
+
+    }
+}
+
+@each $margin-top,$margin-right,$margin-bottom,$margin-left in mt,mr,mb,ml {
+    @for $num from 0 to 80 {  
+
+        .#{$margin-top}-#{$num} {
+            margin-top: #{$num}px;
+        }
+
+        .mr#{$margin-right}-#{$num} {
+            margin-right: #{$num}px;
+        }
+
+        .mb#{$margin-bottom}-#{$num} {
+            margin-bottom: #{$num}px;
+        }
+
+        .ml#{$margin-left}-#{$num} {
+            margin-left: #{$num}px;
+        }
+
+    }
+}
